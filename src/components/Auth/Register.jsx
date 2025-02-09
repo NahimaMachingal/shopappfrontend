@@ -26,7 +26,7 @@ const Register = () => {
     const handleSubmit = async (values) => {
         try {
             // Send both password and confirm_password to match backend expectations
-            const response = await axios.post("http://127.0.0.1:8000/register/", values);
+            const response = await axios.post("https://shopappbackend-w541.onrender.com/register/", values);
             
             if (response.status === 201) {
                 toast.success("Registered Successfully", { position: "top-center", autoClose: 3000 });

@@ -3,7 +3,7 @@ import axios from "axios";
 import { loginSuccess, logout } from "./authSlice";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://shopappbackend-w541.onrender.com";
 
 export const refreshAccessToken = createAsyncThunk(
   "auth/refreshAccessToken", // action type prefix
