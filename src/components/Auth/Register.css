@@ -1,0 +1,101 @@
+/* src/components/Auth/Register.css */
+
+/* src/components/Auth/Register.css */
+
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    padding: 20px;
+}
+
+.register-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.register-title {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    border-radius: 8px;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+}
+
+.input-container:focus-within {
+    border-color: #6a11cb;
+}
+
+.input-icon {
+    font-size: 18px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.error-text {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+.register-button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.register-button:hover {
+    opacity: 0.85;
+}
+
+.login-link {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6a11cb;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

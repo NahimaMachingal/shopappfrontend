@@ -1,0 +1,69 @@
+/* Navbar Styles */
+nav {
+    background-color: #2563eb; /* Blue background */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  body {
+    margin: 0;
+    padding-top: 70px; /* Adjust this based on navbar height */
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    color: #d1d5db; /* Light gray on hover */
+  }
+  
+  nav .brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  nav .button-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #ef4444; /* Red for logout */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #dc2626;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav .button-group {
+      margin-top: 10px;
+    }
+  }
+  

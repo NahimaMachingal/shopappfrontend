@@ -1,0 +1,24 @@
+/* src/styles/customer/Dashboard.css */
+.dashboard {
+    padding: 20px;
+    text-align: center;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.order-table th, .order-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.order-table th {
+    background-color: #f4f4f4;
+}
+
+.error {
+    color: red;
+}

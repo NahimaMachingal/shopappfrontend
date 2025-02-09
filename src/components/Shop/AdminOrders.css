@@ -1,0 +1,46 @@
+/* src/components/Shop/AdminOrders.css */
+.admin-orders-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .order-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+  }
+  
+  .order-table th, .order-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .order-table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .order-table td ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+  }
+  
+  .no-orders {
+    text-align: center;
+    font-size: 18px;
+    color: gray;
+  }
+  
