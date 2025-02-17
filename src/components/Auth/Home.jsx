@@ -9,7 +9,8 @@ import Navbar from '../Customer/Navbar';
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { products, status, error } = useSelector((state) => state.customer);
+  const { products, status, error, cart } = useSelector((state) => state.customer);
+  const cartStatus = useSelector((state) => state.customer.cartStatus);
   const accessToken = useSelector((state) => state.auth.accessToken) || localStorage.getItem("accessToken");
   const user = useSelector((state) => state.auth.user) || JSON.parse(localStorage.getItem("user")); // Get user from Redux or localStorage
 
@@ -23,7 +24,10 @@ const Home = () => {
     if (status === 'idle') {
       dispatch(fetchProducts(accessToken)); // Pass token to fetchProducts
     }
-  }, [dispatch, status, accessToken, navigate]);
+     if (cartStatus === 'idle') {
+    dispatch(fetchCartItems());
+  }
+  }, [dispatch, status,cartStatus, accessToken, navigate]);
 
   const handleAddToCart = (product) => {
     if (!accessToken) {
@@ -71,11 +75,16 @@ const Home = () => {
             <p>Stock: {product.stock}</p>
             <p>Rating: {product.average_rating}</p>
             <div className="button-group">
-              <button className="add-to-cart" onClick={() => handleAddToCart(product)}>
-                Add to Cart
-              </button>
-              
-            </div>
+  {cart.some((item) => item.product === product.id) ? (
+    <button className="added-to-cart" disabled>
+      Added to Cart
+    </button>
+  ) : (
+    <button className="add-to-cart" onClick={() => handleAddToCart(product)}>
+      Add to Cart
+    </button>
+  )}
+</div>
           </div>
         ))}
       </div>
